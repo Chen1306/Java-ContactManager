@@ -1,0 +1,101 @@
+/* 通讯录管理系统 - 全局样式 */
+
+.root {
+    -fx-font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    -fx-background-color: #f0f2f5;
+}
+
+/* 表格样式 */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-text-fill: #555;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #f0f0f0 transparent;
+    -fx-font-size: 13px;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #e8f4fd;
+    -fx-text-fill: #1a73e8;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #f5f9ff;
+}
+
+/* 滚动条 */
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #ccc;
+    -fx-background-radius: 4;
+}
+
+/* 按钮 */
+.button {
+    -fx-cursor: hand;
+    -fx-font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 文本框 */
+.text-field {
+    -fx-font-family: "Microsoft YaHei", sans-serif;
+    -fx-font-size: 13px;
+}
+
+/* 对话框 */
+.dialog-pane {
+    -fx-background-color: #f8f9fa;
+    -fx-font-family: "Microsoft YaHei", sans-serif;
+}
+
+.dialog-pane .button-bar .button {
+    -fx-min-width: 80px;
+}
+
+/* 标签页 */
+.tab-pane .tab {
+    -fx-padding: 6 16;
+    -fx-font-size: 13px;
+    -fx-font-family: "Microsoft YaHei", sans-serif;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: white;
+}
+
+/* 菜单 */
+.menu-bar {
+    -fx-background-color: transparent;
+}
+
+.menu-item {
+    -fx-font-family: "Microsoft YaHei", sans-serif;
+    -fx-font-size: 13px;
+}
+
+/* 列表视图 */
+.list-view {
+    -fx-background-color: #2c3e50;
+    -fx-border-color: transparent;
+}
+
+.list-cell:selected {
+    -fx-background-color: #1a73e8;
+}
+
+/* 工具提示 */
+.tooltip {
+    -fx-font-family: "Microsoft YaHei", sans-serif;
+    -fx-font-size: 12px;
+}

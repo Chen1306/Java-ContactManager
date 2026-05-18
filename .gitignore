@@ -1,0 +1,12 @@
+target/
+.vscode/
+.idea/
+*.class
+*.jar
+*.war
+*.ear
+*.ctxt
+.DS_Store
+*.xml
+!pom.xml
+!src/**/*.xml
