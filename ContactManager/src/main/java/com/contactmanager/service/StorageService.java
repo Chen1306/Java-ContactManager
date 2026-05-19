@@ -19,16 +19,20 @@ import org.w3c.dom.*;
  */
 public class StorageService {
 
-    private static final String DATA_DIR = System.getProperty("user.home") + File.separator + "ContactManager";
-    private static final String DATA_FILE = DATA_DIR + File.separator + "contacts.xml";
+    private String dataDir = System.getProperty("user.home") + File.separator + "ContactManager";
+    private static final String FILE_NAME = "contacts.xml";
 
     public StorageService() {
         // 确保数据目录存在
-        new File(DATA_DIR).mkdirs();
+        new File(getDataDir()).mkdirs();
     }
 
     public String getDataDir() {
-        return DATA_DIR;
+        return dataDir;
+    }
+
+    private File getDataFile() {
+        return new File(getDataDir(), FILE_NAME);
     }
 
     // ========== 保存 ==========
@@ -62,14 +66,14 @@ public class StorageService {
         tf.setOutputProperty(OutputKeys.INDENT, "yes");
         tf.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
         tf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-        tf.transform(new DOMSource(doc), new StreamResult(new File(DATA_FILE)));
+        tf.transform(new DOMSource(doc), new StreamResult(getDataFile()));
     }
 
     // ========== 加载 ==========
 
     public ContactBook load() throws Exception {
         ContactBook book = new ContactBook();
-        File f = new File(DATA_FILE);
+        File f = getDataFile();
         if (!f.exists()) return book;
 
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
